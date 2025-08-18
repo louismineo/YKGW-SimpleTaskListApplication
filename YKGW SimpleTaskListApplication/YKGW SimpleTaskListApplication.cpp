@@ -5,7 +5,14 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Welcome to Louis' Task List Application\n";
+
+    std::cout << "What would you like to do today?" << std::endl;
+    std::cout << "/view     --- View all tasks" << std::endl;
+    std::cout << "/add      --- Add a new task" << std::endl;
+    std::cout << "/complete --- Mark a task as completed" << std::endl;
+    std::cout << "/delete   --- Add a new task" << std::endl;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
