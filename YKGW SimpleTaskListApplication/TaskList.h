@@ -10,5 +10,7 @@ private:
 	std::vector<Task> taskList;
 
 public:
-	void addTask()
+	void addTask(Task newTask);
+	void markTaskAsCompleted(int taskID);
+	void deleteTask(int taskID);
 };

@@ -17,4 +17,5 @@ private:
 
 public:
 	void markAsCompleted();
+	int getTaskID();
 };

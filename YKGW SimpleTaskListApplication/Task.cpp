@@ -6,7 +6,7 @@ void Task::markAsCompleted()
 }
 
 
-std::chrono::year_month_day convertStringDateToYMD(std::string date_param)
+std::chrono::year_month_day Task::convertStringDateToYMD(std::string date_param)
 {
 	//check if it is DD/MM/YYYY
 	std::regex const date_pattern(R"(^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}$)");
@@ -31,4 +31,9 @@ std::chrono::year_month_day convertStringDateToYMD(std::string date_param)
 		// handle wrong date format
 		throw Error::DateFormatException();
 	}
+}
+
+int Task::getTaskID()
+{
+	return taskID;
 }
