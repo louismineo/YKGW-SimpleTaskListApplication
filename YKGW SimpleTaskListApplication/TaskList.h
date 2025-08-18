@@ -7,8 +7,9 @@
 class TaskList
 {
 public:
-	std::vector<Task> taskList;
+	std::vector<Task> taskListVector;
 	void addTask(Task newTask);
 	void markTaskAsCompleted(int taskID);
 	void deleteTask(int taskID);
+	int getTaskListCount();
 };

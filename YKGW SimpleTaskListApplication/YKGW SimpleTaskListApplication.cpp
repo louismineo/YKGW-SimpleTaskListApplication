@@ -3,14 +3,15 @@
 
 #include <iostream>
 
+#include "TaskManager.h"
+
 int main()
 {
     std::cout << "Welcome to Louis' Task List Application\n";
 
-    std::cout << "What would you like to do today?" << std::endl;
-    std::cout << "/add      --- Add a new task" << std::endl;
-    std::cout << "/complete --- Mark a task as completed" << std::endl;
-    std::cout << "/delete   --- Add a new task" << std::endl;
+    TaskManager taskManager;
+
+    taskManager.print();
 
 }
 

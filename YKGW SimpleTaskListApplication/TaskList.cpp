@@ -3,16 +3,16 @@
 
 void TaskList::addTask(Task newTask)
 {
-	taskList.push_back(newTask);
+	taskListVector.push_back(newTask);
 }
 
 void TaskList::markTaskAsCompleted(int taskID)
 {
-	for(int idx = 0; idx < taskList.size(); ++idx)
+	for(int idx = 0; idx < taskListVector.size(); ++idx)
 	{
-		if(taskList[idx].getTaskID() == taskID)
+		if(taskListVector[idx].getTaskID() == taskID)
 		{
-			taskList[idx].markAsCompleted();
+			taskListVector[idx].markAsCompleted();
 			return;
 		}
 	}
@@ -24,15 +24,20 @@ void TaskList::markTaskAsCompleted(int taskID)
 void TaskList::deleteTask(int taskID)
 {
 	//find the task and its ID
-	for (int idx = 0; idx < taskList.size(); ++idx)
+	for (int idx = 0; idx < taskListVector.size(); ++idx)
 	{
-		if (taskList[idx].getTaskID() == taskID)
+		if (taskListVector[idx].getTaskID() == taskID)
 		{
-			taskList.erase(taskList.begin() + idx);
+			taskListVector.erase(taskListVector.begin() + idx);
 			return;
 		}
 	}
 
 	//if id is invalid or cannot be found in the vector, it will reach this part of the code
 	throw Error::InvalidTaskIDException();
+}
+
+int TaskList::getTaskListCount()
+{
+	return static_cast<int>(taskListVector.size());
 }
