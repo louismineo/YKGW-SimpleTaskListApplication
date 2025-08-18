@@ -1,4 +1,12 @@
 #include "Task.h"
+#include "Error.h"
+
+Task::Task(int newTaskID, std::string newTaskName, std::string newTaskDueDateString) // newTaskID will come from TaskManager
+{
+	this->taskID = newTaskID;
+	this->m_Name = newTaskName;
+	this->m_dueDate = convertStringDateToYMD(newTaskDueDateString);
+}
 
 void Task::markAsCompleted()
 {

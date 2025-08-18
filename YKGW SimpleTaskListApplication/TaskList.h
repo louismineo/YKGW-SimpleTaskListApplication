@@ -6,10 +6,8 @@
 
 class TaskList
 {
-private:
-	std::vector<Task> taskList;
-
 public:
+	std::vector<Task> taskList;
 	void addTask(Task newTask);
 	void markTaskAsCompleted(int taskID);
 	void deleteTask(int taskID);
