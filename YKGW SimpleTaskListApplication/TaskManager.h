@@ -1,5 +1,7 @@
 ﻿#pragma once
 #include"TaskList.h"
+#include "TaskPrinter.h"
+
 
 
 //Task Manager will handle the public functions to print the tasks in a list and handle the different commands (add, view, complete, delete) 
@@ -8,20 +10,9 @@ class TaskManager
 {
 private:
 	int taskIDCounter = 1;
-	TaskList tasklist;
+	TaskList taskList;
+	TaskPrinter taskPrinter;
 
-	// printing config
-	int idWidth = 3;
-	int nameWidth = 20;
-	int dateWidth = 11;
-	int statusWidth = 7;
-	void printTaskListTable(int taskCount, int& completedTasksCount);
-	void printSummaryCountTable(int taskCount, int completedTasksCount);
-	void printPrimaryChoices();
-
-	// helper functions
-	std::string centerText(const std::string& text, int width);
-	std::vector<std::string>wrapTextWithHyphen(std::string text, int width);
 	SORTING_FIELD convertToSortingFieldEnum(std::string field);
 	SORTING_ORDER convertToSortingOrderEnum(std::string field);
 

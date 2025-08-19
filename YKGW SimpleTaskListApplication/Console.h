@@ -20,7 +20,8 @@
 
 class Console {
 public:
-    static HANDLE hConsole;
+    inline static HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);;
+
 
     static void setColor(int color) {
         SetConsoleTextAttribute(hConsole, color);
@@ -47,5 +48,3 @@ public:
     }
 };
 
-// initialize global handle
-HANDLE Console::hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
