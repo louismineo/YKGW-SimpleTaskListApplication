@@ -93,7 +93,8 @@ void TaskPrinter::printTaskListTable(TaskList& tasklist, int& taskCount, int& co
             bool taskCompleted = task.getIsCompletedBool();
 
             // increment count for the summary table to use
-            if (taskCompleted)++completedTasksCount;
+            if (taskCompleted)
+                ++completedTasksCounter;
 
             std::vector<std::string> nameLines = wrapTextWithHyphen(task.getTaskName(), nameWidth);
 

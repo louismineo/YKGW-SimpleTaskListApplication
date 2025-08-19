@@ -1,2 +1,10 @@
-﻿  TaskManager.cpp
+﻿  CommandHandler.cpp
+  Task.cpp
+  TaskList.cpp
+  TaskManager.cpp
+  TaskPrinter.cpp
+C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskPrinter.cpp(13,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskPrinter.cpp(14,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskPrinter.cpp(102,26): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
   YKGW SimpleTaskListApplication.vcxproj -> C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\x64\Debug\YKGW SimpleTaskListApplication.exe

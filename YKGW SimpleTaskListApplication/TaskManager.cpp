@@ -33,8 +33,14 @@ void TaskManager::mainLoop()
 	    try
         {
             taskPrinter.printTaskListTable(taskList, taskCount, completedTasksCount);
+            
             if(taskCount > 0)
+            {
+                std::cout << std::endl;
                 taskPrinter.printSummaryCountTable(taskCount, completedTasksCount);
+            }
+                
+            std::cout << std::endl;
             taskPrinter.printMenu();
 
             std::cout << "\n>"; // clear the line for std::getline
