@@ -50,38 +50,48 @@ void TaskManager::printTaskListTable(int taskCount, int& completedTasksCount)
 	else
 	{
         std::cout << std::right; //reset to the right
+
         for(auto task: tasklist.taskListVector)
         {
             bool taskCompleted = task.getIsCompletedBool();
-            // increment count for the summary table to use
+
+        	// increment count for the summary table to use
             if (taskCompleted)++completedTasksCount;
 
-            // print ID col
-            std::cout << "|";
-            Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
-            std::cout << std::setw(idWidth) << task.getTaskID();
-            Console::setColor(CONSOLE_GRAY);
+            std::vector<std::string> nameLines = wrapTextWithHyphen(task.getTaskName(), nameWidth);
 
-            // print name col
-            std::cout << "|";
-            Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
-            std::cout << std::left << std::setw(nameWidth) << task.getTaskName();
-            Console::setColor(CONSOLE_GRAY);
+            // determine the number of lines needed for this row
+            int rowLines = nameLines.size();
 
-            // print due date col
-            std::cout << "|";
-            Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
-            std::cout << std::right << std::setw(dateWidth) << task.getDueDateInString();
-            Console::setColor(CONSOLE_GRAY);
+            for (int lineNumber = 0; lineNumber < rowLines; ++lineNumber)
+            {
+                // print ID col
+                std::cout << "|";
+                Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
+                std::cout << std::setw(idWidth) << (lineNumber == 0 ? std::to_string(task.getTaskID()) : "");
+                Console::setColor(CONSOLE_GRAY);
 
-            // print status col
-            std::cout << "|";
-            Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
-            std::cout << std::setw(statusWidth) << (taskCompleted ? "DONE" : "X");
-            Console::setColor(CONSOLE_GRAY);
+                // print name col
+                std::cout << "|";
+                Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
+                std::cout << std::left << std::setw(nameWidth) << (lineNumber < rowLines ? nameLines[lineNumber] : "");
+                Console::setColor(CONSOLE_GRAY);
 
-            // close the row
-            std::cout << "|" << std::endl;
+                // print due date col
+                std::cout << "|";
+                Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
+                std::cout << std::right << std::setw(dateWidth) << (lineNumber == 0 ? task.getDueDateInString() : "");
+                Console::setColor(CONSOLE_GRAY);
+
+                // print status col
+                std::cout << "|";
+                Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
+                std::cout << std::setw(statusWidth) << (lineNumber == 0 ? (taskCompleted ? "DONE" : "X"): "");
+                Console::setColor(CONSOLE_GRAY);
+
+                // close the row
+                std::cout << "|" << std::endl;
+            }
         }
 	}
 
@@ -168,6 +178,31 @@ std::string TaskManager::centerText(const std::string& text, int width)
     int rightPadding = width - text.size() - leftPadding;
 
     return std::string(leftPadding, ' ') + text + std::string(rightPadding, ' ');
+}
+
+std::vector<std::string> TaskManager::wrapTextWithHyphen(std::string text, int width)
+{
+    std::vector<std::string> lines;
+
+    int start = 0;
+
+    while (start< text.length())
+    {
+        int lengthRemaining = width;
+        if (start + lengthRemaining < text.size()) {
+            // check if the last char is mid-word
+            if (!isspace(text[start + lengthRemaining - 1]) && !isspace(text[start + lengthRemaining])) {
+                lengthRemaining--;  // leave space for hyphen
+                lines.push_back(text.substr(start, lengthRemaining) + "-");
+                start += lengthRemaining;
+                continue;
+            }
+        }
+        lines.push_back(text.substr(start, lengthRemaining));
+        start += lengthRemaining;
+    }
+
+    return lines;
 }
 
 void TaskManager::handleCommand(std::vector<std::string> commandLineParams)

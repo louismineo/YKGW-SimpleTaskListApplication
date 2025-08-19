@@ -21,6 +21,7 @@ private:
 
 	// helper functions
 	std::string centerText(const std::string& text, int width);
+	std::vector<std::string>wrapTextWithHyphen(std::string text, int width);
 
 	bool exitMainLoopBool = false;
 
