@@ -57,6 +57,11 @@ std::string Task::getDueDateInString()
 	return std::format("{:%d/%m/%Y}", m_dueDate); // DD/MM/YYYY
 }
 
+std::chrono::year_month_day Task::getDueDateInYMD()
+{
+	return m_dueDate;
+}
+
 bool Task::getIsCompletedBool()
 {
 	return isCompleted;

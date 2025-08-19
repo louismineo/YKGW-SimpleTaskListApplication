@@ -22,6 +22,8 @@ private:
 	// helper functions
 	std::string centerText(const std::string& text, int width);
 	std::vector<std::string>wrapTextWithHyphen(std::string text, int width);
+	SORTING_FIELD convertToSortingFieldEnum(std::string field);
+	SORTING_ORDER convertToSortingOrderEnum(std::string field);
 
 	bool exitMainLoopBool = false;
 
@@ -30,6 +32,7 @@ private:
 	void addCommand(std::string taskName, std::string dueDateinDDMMYYY);
 	void completeCommand(int taskID);
 	void deleteCommand(int taskID);
+	void sortCommand(std::string columnToSort, std::string ascOrDesc);
 	void exitCommand();
 	void print();
 

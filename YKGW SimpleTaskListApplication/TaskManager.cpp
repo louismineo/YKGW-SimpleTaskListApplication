@@ -1,9 +1,12 @@
 ﻿#include "TaskManager.h"
 #include "Task.h"
 #include "Console.h"
+#include "Error.h"
 
 #include <iostream>
 #include <sstream>
+
+
 
 
 void TaskManager::printTaskListTable(int taskCount, int& completedTasksCount)
@@ -163,10 +166,11 @@ void TaskManager::printSummaryCountTable(int taskCount, int completedTasksCount)
 void TaskManager::printPrimaryChoices()
 {
     std::cout << "What would you like to do today?" << std::endl;
-    std::cout << "/add <Task Name> <Due date in DD/MM/YYYY format>  --- Add a new task" << std::endl;
-    std::cout << "/complete <Task ID>                               --- Mark a task as completed" << std::endl;
-    std::cout << "/delete <Task ID>                                 --- Add a new task" << std::endl;
-    std::cout << "/exit                                             --- Exit Application" << std::endl;
+    std::cout << "/add      <Task Name> <Due date in DD/MM/YYYY format>     --- Add a new task" << std::endl;
+    std::cout << "/complete <Task ID>                                       --- Mark a task as completed" << std::endl;
+    std::cout << "/delete   <Task ID>                                       --- Add a new task" << std::endl;
+    std::cout << "/sort     <ID or DueDate or Status> <ASC or DESC>         --- Sort Task Table in various ways" << std::endl;
+    std::cout << "/exit                                                     --- Exit Application" << std::endl;
 }
 
 std::string TaskManager::centerText(const std::string& text, int width)
@@ -205,6 +209,29 @@ std::vector<std::string> TaskManager::wrapTextWithHyphen(std::string text, int w
     return lines;
 }
 
+SORTING_FIELD TaskManager::convertToSortingFieldEnum(std::string field)
+{
+    if (field == "ID")
+        return SORTING_FIELD::ID;
+    else if (field == "DueDate")
+        return SORTING_FIELD::DUE_DATE;
+    else if (field == "Status")
+        return SORTING_FIELD::COMPLETED;
+    else
+        throw Error::InvalidSortingFieldException();
+
+}
+
+SORTING_ORDER TaskManager::convertToSortingOrderEnum(std::string field)
+{
+    if (field == "ASC")
+        return SORTING_ORDER::ASC;
+    else if (field == "DESC")
+        return SORTING_ORDER::DESC;
+    else
+        throw Error::InvalidSortingOrderException();
+}
+
 void TaskManager::handleCommand(std::vector<std::string> commandLineParams)
 {
     if(commandLineParams[0] == "/add")
@@ -228,6 +255,10 @@ void TaskManager::handleCommand(std::vector<std::string> commandLineParams)
     {
     	exitCommand();
     }
+    else if (commandLineParams[0] == "/sort")
+    {
+        sortCommand(commandLineParams[1], commandLineParams[2]);
+    }
     else
     {
 	    // todo:
@@ -249,6 +280,11 @@ void TaskManager::completeCommand(int taskID)
 void TaskManager::deleteCommand(int taskID)
 {
     tasklist.deleteTask(taskID);
+}
+
+void TaskManager::sortCommand(std::string columnToSort, std::string ascOrDesc)
+{
+    tasklist.sortTasks(convertToSortingFieldEnum(columnToSort), convertToSortingOrderEnum(ascOrDesc));
 }
 
 void TaskManager::exitCommand()
@@ -294,7 +330,6 @@ void TaskManager::mainLoop()
         }
 
         handleCommand(inputTokens);
-        
     }
 
     std::cout << "Exiting SimpleTaskListApplication..... " << std::endl;

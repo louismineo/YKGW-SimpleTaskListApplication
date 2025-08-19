@@ -20,5 +20,6 @@ public:
 	int getTaskID();
 	std::string getTaskName();
 	std::string getDueDateInString();
+	std::chrono::year_month_day getDueDateInYMD();
 	bool getIsCompletedBool();
 };

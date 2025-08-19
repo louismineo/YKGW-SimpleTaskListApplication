@@ -37,6 +37,31 @@ void TaskList::deleteTask(int taskID)
 	throw Error::InvalidTaskIDException();
 }
 
+void TaskList::sortTasks(SORTING_FIELD columnToSort, SORTING_ORDER ordertToSort)
+{
+	std::sort(taskListVector.begin(), taskListVector.end(),
+		[columnToSort, ordertToSort](Task& a,Task& b) {
+			switch (columnToSort) {
+			case SORTING_FIELD::ID:
+				return (ordertToSort == SORTING_ORDER::ASC)
+					? (a.getTaskID() < b.getTaskID())
+					: (a.getTaskID() > b.getTaskID());
+
+			case SORTING_FIELD::DUE_DATE:
+				return (ordertToSort == SORTING_ORDER::ASC)
+					? (a.getDueDateInYMD() < b.getDueDateInYMD())
+					: (a.getDueDateInYMD() > b.getDueDateInYMD());
+
+			case SORTING_FIELD::COMPLETED:
+				return (ordertToSort == SORTING_ORDER::ASC)
+					? (a.getIsCompletedBool() < b.getIsCompletedBool())
+					: (a.getIsCompletedBool() > b.getIsCompletedBool());
+			}
+			return false; // fallback, shouldn't hit
+		}
+	);
+}
+
 int TaskList::getTaskListCount()
 {
 	return static_cast<int>(taskListVector.size());
