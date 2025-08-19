@@ -315,21 +315,30 @@ void TaskManager::mainLoop()
     // every while loop iteration is 1 input;
     while(exitMainLoopBool == false)
     {
-        print();
+	    try
+        {
+		    print();
 
-        std::cout << "\n>";
-        std::string commandLine;
-        std::getline(std::cin, commandLine);  // reads the line
+	    	std::cout << "\n>";
+	    	std::string commandLine;
+	    	std::getline(std::cin, commandLine);  // reads the line
 
-        std::istringstream iss(commandLine);
-        std::vector<std::string> inputTokens;
-        std::string word;
+	    	std::istringstream iss(commandLine);
+	    	std::vector<std::string> inputTokens;
+	    	std::string word;
 
-        while (iss >> word) {  // split by whitespace
-            inputTokens.push_back(word);
+	    	while (iss >> word) {  // split by whitespace
+	    		inputTokens.push_back(word);
+	    	}
+
+	    	handleCommand(inputTokens);
+	    }
+        catch (const std::runtime_error& e) {
+            std::cerr << "[Runtime error] " << e.what() << "\n";
         }
-
-        handleCommand(inputTokens);
+        catch (...) {
+            std::cerr << "[Unknown error occurred]\n";
+        }
     }
 
     std::cout << "Exiting SimpleTaskListApplication..... " << std::endl;
