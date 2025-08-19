@@ -77,7 +77,7 @@ void TaskManager::printTaskListTable(int taskCount, int& completedTasksCount)
             // print status col
             std::cout << "|";
             Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
-            std::cout << std::setw(statusWidth) << (taskCompleted ? "✔" : "✖");
+            std::cout << std::setw(statusWidth) << (taskCompleted ? "DONE" : "X");
             Console::setColor(CONSOLE_GRAY);
 
             // close the row
@@ -174,22 +174,23 @@ void TaskManager::handleCommand(std::vector<std::string> commandLineParams)
 {
     if(commandLineParams[0] == "/add")
     {
-        // todo:
-        addCommand(commandLineParams[1], commandLineParams[2]);
+        // concatenate the string tokens to form the task name
+        std::string concatenatedTaskName = "";
+        for (int idx = 1; idx < commandLineParams.size() - 1; ++idx)
+            concatenatedTaskName += (commandLineParams[idx] + " ");
+
+        addCommand(concatenatedTaskName, commandLineParams[commandLineParams.size()-1]);
     }
     else if (commandLineParams[0] == "/complete")
     {
-        // todo:
         completeCommand(std::stoi(commandLineParams[1]));
     }
     else if (commandLineParams[0] == "/delete")
     {
-        // todo:
         deleteCommand(std::stoi(commandLineParams[1]));
     }
     else if (commandLineParams[0] == "/exit")
     {
-        // todo:
     	exitCommand();
     }
     else
