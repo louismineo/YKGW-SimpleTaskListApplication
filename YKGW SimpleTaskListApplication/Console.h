@@ -25,6 +25,26 @@ public:
     static void setColor(int color) {
         SetConsoleTextAttribute(hConsole, color);
     }
+
+    static void clearConsole() {
+        COORD coordScreen = { 0, 0 };
+        DWORD cCharsWritten;
+        CONSOLE_SCREEN_BUFFER_INFO csbi;
+        DWORD dwConSize;
+
+        // Get the number of character cells in the current buffer
+        if (!GetConsoleScreenBufferInfo(hConsole, &csbi)) return;
+        dwConSize = csbi.dwSize.X * csbi.dwSize.Y;
+
+        // Fill the entire screen with spaces
+        FillConsoleOutputCharacter(hConsole, ' ', dwConSize, coordScreen, &cCharsWritten);
+
+        // Fill the buffer with the current colors and attributes
+        FillConsoleOutputAttribute(hConsole, csbi.wAttributes, dwConSize, coordScreen, &cCharsWritten);
+
+        // Move the cursor to the top left
+        SetConsoleCursorPosition(hConsole, coordScreen);
+    }
 };
 
 // initialize global handle

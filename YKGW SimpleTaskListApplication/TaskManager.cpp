@@ -267,22 +267,51 @@ void TaskManager::handleCommand(std::vector<std::string> commandLineParams)
 
 void TaskManager::addCommand(std::string taskName, std::string dueDateinDDMMYYY)
 {
+    Console::clearConsole();
+    Console::setColor(CONSOLE_BRIGHT_BLUE);
+    std::cout << "**********************************************" << std::endl;
+    std::cout << "Adding Task to the list. (" << taskName << " - " << dueDateinDDMMYYY<<")"<< std::endl;
+    std::cout << "**********************************************" << std::endl;
+    Console::setColor(CONSOLE_GRAY);
+
+
     tasklist.addTask(Task{taskIDCounter, taskName , dueDateinDDMMYYY });
 	++taskIDCounter;
 }
 
 void TaskManager::completeCommand(int taskID)
 {
+    Console::clearConsole();
+    Console::setColor(CONSOLE_BRIGHT_BLUE);
+    std::cout << "**********************************************" << std::endl;
+    std::cout << "Marking Task as complete. (TaskID: " << taskID << ")" << std::endl;
+    std::cout << "**********************************************" << std::endl;
+    Console::setColor(CONSOLE_GRAY);
+
     tasklist.markTaskAsCompleted(taskID);
 }
 
 void TaskManager::deleteCommand(int taskID)
 {
+    Console::clearConsole();
+    Console::setColor(CONSOLE_BRIGHT_BLUE);
+    std::cout << "**********************************************" << std::endl;
+    std::cout << "Deleting Task as from List. (TaskID: " << taskID << ")" << std::endl;
+    std::cout << "**********************************************" << std::endl;
+    Console::setColor(CONSOLE_GRAY);
+
     tasklist.deleteTask(taskID);
 }
 
 void TaskManager::sortCommand(std::string columnToSort, std::string ascOrDesc)
 {
+    Console::clearConsole();
+    Console::setColor(CONSOLE_BRIGHT_BLUE);
+    std::cout << "**********************************************" << std::endl;
+    std::cout << "Sorting Tasks. By (columnToSort: " << columnToSort << " & ascOrDesc: " << ascOrDesc << ")" << std::endl;
+    std::cout << "**********************************************" << std::endl;
+    Console::setColor(CONSOLE_GRAY);
+
     tasklist.sortTasks(convertToSortingFieldEnum(columnToSort), convertToSortingOrderEnum(ascOrDesc));
 }
 
@@ -333,10 +362,16 @@ void TaskManager::mainLoop()
 	    	handleCommand(inputTokens);
 	    }
         catch (const std::runtime_error& e) {
+            Console::clearConsole();
+            Console::setColor(CONSOLE_RED);
             std::cerr << "[Runtime error] " << e.what() << "\n";
+            Console::setColor(CONSOLE_GRAY);
         }
         catch (...) {
+            Console::clearConsole();
+            Console::setColor(CONSOLE_RED);
             std::cerr << "[Unknown error occurred]\n";
+            Console::setColor(CONSOLE_GRAY);
         }
     }
 
