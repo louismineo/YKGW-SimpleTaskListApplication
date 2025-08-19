@@ -18,7 +18,7 @@ private:
 	std::vector<std::string>wrapTextWithHyphen(std::string text, int width);
 
 public:
-	void printTaskListTable(const TaskList& tasklist, int taskCount, int& completedTasksCount);
+	void printTaskListTable(TaskList& tasklist, int& taskCount, int& completedTasksCount);
 	void printSummaryCountTable(int taskCount, int completedTasksCount);
-	void printPrimaryChoices();
+	void printMenu();
 };

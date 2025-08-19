@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include "CommandHandler.h"
 #include"TaskList.h"
 #include "TaskPrinter.h"
 
@@ -9,24 +10,22 @@
 class TaskManager
 {
 private:
+	bool exitMainLoopBool = false;
 	int taskIDCounter = 1;
+
 	TaskList taskList;
 	TaskPrinter taskPrinter;
+	CommandHandler commandHandler;
 
-	SORTING_FIELD convertToSortingFieldEnum(std::string field);
-	SORTING_ORDER convertToSortingOrderEnum(std::string field);
-
-	bool exitMainLoopBool = false;
+	
 
 	// input handling
-	void handleCommand(std::vector<std::string> commandLineParams);
-	void addCommand(std::string taskName, std::string dueDateinDDMMYYY);
-	void completeCommand(int taskID);
-	void deleteCommand(int taskID);
-	void sortCommand(std::string columnToSort, std::string ascOrDesc);
-	void exitCommand();
-	void print();
+	
+	//void print();
+
+	std::vector<std::string> tokenize(const std::string& input);
 
 public:
+	TaskManager();
 	void mainLoop();
 };

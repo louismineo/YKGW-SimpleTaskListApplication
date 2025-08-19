@@ -41,9 +41,9 @@ std::vector<std::string> TaskPrinter::wrapTextWithHyphen(std::string text, int w
     return lines;
 }
 
-void TaskPrinter::printTaskListTable(const TaskList& tasklist, int taskCount, int& completedTasksCount)
+void TaskPrinter::printTaskListTable(TaskList& tasklist, int& taskCount, int& completedTasksCount)
 {
-    int completedTasksCounter = 0;
+	int completedTasksCounter = 0;
 
     std::cout << "TASKS" << std::endl;
     // opening headers
@@ -71,7 +71,7 @@ void TaskPrinter::printTaskListTable(const TaskList& tasklist, int taskCount, in
 
 
 
-    if (taskCount < 1)
+    if (tasklist.getTaskListCount() < 1)
     {
         std::string msg = "No Tasks Available";
 
@@ -140,6 +140,7 @@ void TaskPrinter::printTaskListTable(const TaskList& tasklist, int taskCount, in
         << "+" << std::string(statusWidth, '-')
         << "+\n";
 
+    taskCount = tasklist.getTaskListCount();
     completedTasksCount = completedTasksCounter;
 }
 
@@ -198,7 +199,7 @@ void TaskPrinter::printSummaryCountTable(int taskCount, int completedTasksCount)
 
 }
 
-void TaskPrinter::printPrimaryChoices()
+void TaskPrinter::printMenu()
 {
     std::cout << "What would you like to do today?" << std::endl;
     std::cout << "/add      <Task Name> <Due date in DD/MM/YYYY format>     --- Add a new task" << std::endl;
