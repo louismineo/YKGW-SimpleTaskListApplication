@@ -261,8 +261,7 @@ void TaskManager::handleCommand(std::vector<std::string> commandLineParams)
     }
     else
     {
-	    // todo:
-        // throw invalid input command exception
+        throw Error::InvalidCommandException();
     }
 }
 

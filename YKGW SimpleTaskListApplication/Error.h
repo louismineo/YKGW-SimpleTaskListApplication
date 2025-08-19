@@ -18,6 +18,11 @@ public:
 		return Error("Invalid Task ID entered. Please enter a valid Task ID from the list above");
 	}
 
+	static Error InvalidCommandException()
+	{
+		return Error("Invalid Command entered. Please enter a valid command listed");
+	}
+
 	static Error InvalidSortingFieldException()
 	{
 		return Error("Invalid Sorting Field entered. Please enter a valid field to sort by, from the command");
