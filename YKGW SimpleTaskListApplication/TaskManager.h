@@ -9,7 +9,7 @@ private:
 	int taskIDCounter = 1;
 	TaskList tasklist;
 
-	//printing config
+	// printing config
 	int idWidth = 3;
 	int nameWidth = 20;
 	int dateWidth = 11;
@@ -18,9 +18,19 @@ private:
 	void printSummaryCountTable(int taskCount, int completedTasksCount);
 	void printPrimaryChoices();
 
-	//helper functions
+	// helper functions
 	std::string centerText(const std::string& text, int width);
 
-public:
+	bool exitMainLoopBool = false;
+
+	// input handling
+	void handleCommand(std::vector<std::string> commandLineParams);
+	void addCommand(std::string taskName, std::string dueDateinDDMMYYY);
+	void completeCommand(int taskID);
+	void deleteCommand(int taskID);
+	void exitCommand();
 	void print();
+
+public:
+	void mainLoop();
 };

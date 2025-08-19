@@ -11,7 +11,7 @@ int main()
 
     TaskManager taskManager;
 
-    taskManager.print();
+    taskManager.mainLoop();
 
 }
 

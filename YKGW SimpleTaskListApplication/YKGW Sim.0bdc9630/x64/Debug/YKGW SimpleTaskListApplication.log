@@ -1,4 +1,4 @@
 ﻿  TaskManager.cpp
-C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskManager.cpp(123,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskManager.cpp(124,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskManager.cpp(130,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskManager.cpp(131,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   YKGW SimpleTaskListApplication.vcxproj -> C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\x64\Debug\YKGW SimpleTaskListApplication.exe

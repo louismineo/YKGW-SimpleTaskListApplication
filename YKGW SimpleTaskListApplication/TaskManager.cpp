@@ -1,6 +1,9 @@
 ﻿#include "TaskManager.h"
+#include "Task.h"
 
 #include <iostream>
+#include <sstream>
+
 
 void TaskManager::printTaskListTable(int taskCount, int& completedTasksCount)
 {
@@ -42,13 +45,16 @@ void TaskManager::printTaskListTable(int taskCount, int& completedTasksCount)
 	}
 	else
 	{
-        std::cout << "|" << std::right << std::setw(idWidth + 1)
-            << "|" << std::right << std::setw(nameWidth + 1)
-            << "|" << std::right << std::setw(dateWidth + 1)
-            << "|" << std::right << std::setw(statusWidth + 1)
-            << "|"
-            << std::endl;
-		//todo:
+        std::cout << std::right; //reset to the right
+        for(auto task: tasklist.taskListVector)
+        {
+            std::cout << "|" << std::setw(idWidth + 1) << task.getTaskID()
+	            << "|" << std::setw(nameWidth + 1) << task.getTaskName()
+                << "|" << std::setw(dateWidth + 1) << task.getDueDateInString()
+                << "|" << std::setw(statusWidth + 1) << (task.getIsCompletedBool())
+                << "|"
+                << std::endl;
+        }
 	}
 
 
@@ -110,9 +116,10 @@ void TaskManager::printSummaryCountTable(int taskCount, int completedTasksCount)
 void TaskManager::printPrimaryChoices()
 {
     std::cout << "What would you like to do today?" << std::endl;
-    std::cout << "/add      --- Add a new task" << std::endl;
-    std::cout << "/complete --- Mark a task as completed" << std::endl;
-    std::cout << "/delete   --- Add a new task" << std::endl;
+    std::cout << "/add <Task Name> <Due date in DD/MM/YYYY format>  --- Add a new task" << std::endl;
+    std::cout << "/complete <Task ID>                               --- Mark a task as completed" << std::endl;
+    std::cout << "/delete <Task ID>                                 --- Add a new task" << std::endl;
+    std::cout << "/exit                                             --- Exit Application" << std::endl;
 }
 
 std::string TaskManager::centerText(const std::string& text, int width)
@@ -124,6 +131,56 @@ std::string TaskManager::centerText(const std::string& text, int width)
     int rightPadding = width - text.size() - leftPadding;
 
     return std::string(leftPadding, ' ') + text + std::string(rightPadding, ' ');
+}
+
+void TaskManager::handleCommand(std::vector<std::string> commandLineParams)
+{
+    if(commandLineParams[0] == "/add")
+    {
+        // todo:
+        addCommand(commandLineParams[1], commandLineParams[2]);
+    }
+    else if (commandLineParams[0] == "/complete")
+    {
+        // todo:
+        completeCommand(std::stoi(commandLineParams[1]));
+    }
+    else if (commandLineParams[0] == "/delete")
+    {
+        // todo:
+        deleteCommand(std::stoi(commandLineParams[1]));
+    }
+    else if (commandLineParams[0] == "/exit")
+    {
+        // todo:
+    	exitCommand();
+    }
+    else
+    {
+	    // todo:
+        // throw invalid input command exception
+    }
+}
+
+void TaskManager::addCommand(std::string taskName, std::string dueDateinDDMMYYY)
+{
+    tasklist.addTask(Task{taskIDCounter, taskName , dueDateinDDMMYYY });
+	++taskIDCounter;
+}
+
+void TaskManager::completeCommand(int taskID)
+{
+    tasklist.markTaskAsCompleted(taskID);
+}
+
+void TaskManager::deleteCommand(int taskID)
+{
+    tasklist.deleteTask(taskID);
+}
+
+void TaskManager::exitCommand()
+{
+    exitMainLoopBool = true;
 }
 
 void TaskManager::print()
@@ -142,4 +199,31 @@ void TaskManager::print()
 
 	std::cout << std::endl;
     printPrimaryChoices();
+}
+
+void TaskManager::mainLoop()
+{
+    // every while loop iteration is 1 input;
+    while(exitMainLoopBool == false)
+    {
+        print();
+
+        std::cout << "\n>";
+        std::string commandLine;
+        std::getline(std::cin, commandLine);  // reads the line
+
+        std::istringstream iss(commandLine);
+        std::vector<std::string> inputTokens;
+        std::string word;
+
+        while (iss >> word) {  // split by whitespace
+            inputTokens.push_back(word);
+        }
+
+        handleCommand(inputTokens);
+        
+    }
+
+    std::cout << "Exiting SimpleTaskListApplication..... " << std::endl;
+    std::cout << "Goodbye" << std::endl;
 }

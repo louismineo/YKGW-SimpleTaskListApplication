@@ -18,4 +18,7 @@ public:
 	Task(int newTaskID, std::string newTaskName, std::string newTaskDueDateString);
 	void markAsCompleted();
 	int getTaskID();
+	std::string getTaskName();
+	std::string getDueDateInString();
+	bool getIsCompletedBool();
 };
