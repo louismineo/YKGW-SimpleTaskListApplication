@@ -1,4 +1,6 @@
 ﻿  TaskManager.cpp
-C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskManager.cpp(134,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskManager.cpp(135,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskManager.cpp(80,69): warning C4566: character represented by universal-character-name '\u2714' cannot be represented in the current code page (1252)
+C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskManager.cpp(80,77): warning C4566: character represented by universal-character-name '\u2716' cannot be represented in the current code page (1252)
+C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskManager.cpp(167,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\TaskManager.cpp(168,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   YKGW SimpleTaskListApplication.vcxproj -> C:\Users\Louis\Documents\GitHub\YKGW-SimpleTaskListApplication\YKGW SimpleTaskListApplication\x64\Debug\YKGW SimpleTaskListApplication.exe

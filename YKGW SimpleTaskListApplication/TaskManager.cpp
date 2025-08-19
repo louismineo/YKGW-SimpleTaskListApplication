@@ -52,12 +52,36 @@ void TaskManager::printTaskListTable(int taskCount, int& completedTasksCount)
         std::cout << std::right; //reset to the right
         for(auto task: tasklist.taskListVector)
         {
-            std::cout << "|" << std::setw(idWidth) << task.getTaskID()
-	            << "|" << std::left << std::setw(nameWidth) << task.getTaskName()
-                << "|" << std::right << std::setw(dateWidth) << task.getDueDateInString()
-                << "|" << std::setw(statusWidth) << (task.getIsCompletedBool())
-                << "|"
-                << std::endl;
+            bool taskCompleted = task.getIsCompletedBool();
+            // increment count for the summary table to use
+            if (taskCompleted)++completedTasksCount;
+
+            // print ID col
+            std::cout << "|";
+            Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
+            std::cout << std::setw(idWidth) << task.getTaskID();
+            Console::setColor(CONSOLE_GRAY);
+
+            // print name col
+            std::cout << "|";
+            Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
+            std::cout << std::left << std::setw(nameWidth) << task.getTaskName();
+            Console::setColor(CONSOLE_GRAY);
+
+            // print due date col
+            std::cout << "|";
+            Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
+            std::cout << std::right << std::setw(dateWidth) << task.getDueDateInString();
+            Console::setColor(CONSOLE_GRAY);
+
+            // print status col
+            std::cout << "|";
+            Console::setColor(taskCompleted ? CONSOLE_BRIGHT_GREEN : CONSOLE_BRIGHT_RED);
+            std::cout << std::setw(statusWidth) << (taskCompleted ? "✔" : "✖");
+            Console::setColor(CONSOLE_GRAY);
+
+            // close the row
+            std::cout << "|" << std::endl;
         }
 	}
 
@@ -97,18 +121,27 @@ void TaskManager::printSummaryCountTable(int taskCount, int completedTasksCount)
         << "+\n";
 
     //completed count
-    std::cout << "|"
-        << std::left << std::setw(midPointCount) << "COMPLETED TASKS"
-        << "|"
-        << std::right << std::setw(midPointCount) << completedTasksCount
-        << "|\n";
+    std::cout << "|";
+    Console::setColor(CONSOLE_BRIGHT_GREEN);  // green color
+    std::cout << std::left << std::setw(midPointCount) << "COMPLETED TASKS";
+    Console::setColor(CONSOLE_GRAY);          // reset for colour for border/other text
+    std::cout << "|";
+    Console::setColor(CONSOLE_BRIGHT_GREEN);
+    std::cout << std::right << std::setw(midPointCount) << completedTasksCount;
+    Console::setColor(CONSOLE_GRAY);
+    std::cout << "|\n";
 
     //pending tasks count
-    std::cout << "|"
-        << std::left << std::setw(midPointCount) << "PENDING TASKS"
-        << "|"
-        << std::right << std::setw(midPointCount) << taskCount - completedTasksCount
-        << "|\n";
+    std::cout << "|";
+    Console::setColor(CONSOLE_BRIGHT_RED);    // red color
+    std::cout << std::left << std::setw(midPointCount) << "PENDING TASKS";
+    Console::setColor(CONSOLE_GRAY);          // reset for colour for border/other text
+    std::cout << "|";
+    Console::setColor(CONSOLE_BRIGHT_RED);
+    std::cout << std::right << std::setw(midPointCount) << taskCount - completedTasksCount;
+    Console::setColor(CONSOLE_GRAY);
+    std::cout << "|\n";
+
     std::cout << "+"
         << std::string(midPointCount, '-')
         << "+"
