@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error.h" />
+    <ClInclude Include="Console.h" />
     <ClInclude Include="Task.h" />
     <ClInclude Include="TaskList.h" />
     <ClInclude Include="TaskManager.h" />

@@ -1,5 +1,6 @@
 ﻿#include "TaskManager.h"
 #include "Task.h"
+#include "Console.h"
 
 #include <iostream>
 #include <sstream>
@@ -37,10 +38,13 @@ void TaskManager::printTaskListTable(int taskCount, int& completedTasksCount)
 	{
         std::string msg = "No Tasks Available";
 
-        std::cout << "|"
-			<< centerText(msg, idWidth + nameWidth + dateWidth + statusWidth +3)
-			<< "|"
-			<< std::endl;
+        Console::setColor(CONSOLE_GRAY);
+        std::cout << "|";
+        Console::setColor(CONSOLE_YELLOW);
+        std::cout << centerText(msg, idWidth + nameWidth + dateWidth + statusWidth + 3);
+        Console::setColor(CONSOLE_GRAY);
+        std::cout << "|";
+        std::cout << std::endl;
 
 	}
 	else
@@ -48,10 +52,10 @@ void TaskManager::printTaskListTable(int taskCount, int& completedTasksCount)
         std::cout << std::right; //reset to the right
         for(auto task: tasklist.taskListVector)
         {
-            std::cout << "|" << std::setw(idWidth + 1) << task.getTaskID()
-	            << "|" << std::setw(nameWidth + 1) << task.getTaskName()
-                << "|" << std::setw(dateWidth + 1) << task.getDueDateInString()
-                << "|" << std::setw(statusWidth + 1) << (task.getIsCompletedBool())
+            std::cout << "|" << std::setw(idWidth) << task.getTaskID()
+	            << "|" << std::left << std::setw(nameWidth) << task.getTaskName()
+                << "|" << std::right << std::setw(dateWidth) << task.getDueDateInString()
+                << "|" << std::setw(statusWidth) << (task.getIsCompletedBool())
                 << "|"
                 << std::endl;
         }

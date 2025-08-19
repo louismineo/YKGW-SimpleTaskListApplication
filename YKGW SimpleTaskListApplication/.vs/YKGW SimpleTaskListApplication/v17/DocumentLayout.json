@@ -7,32 +7,36 @@
       "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:TaskManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:Task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:Console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Task.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:Task.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\TaskManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:TaskManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\TaskList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:TaskList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Error.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:Error.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\TaskList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:TaskList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\YKGW SimpleTaskListApplication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:YKGW SimpleTaskListApplication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\TaskManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:TaskManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Error.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:Error.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Task.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:Task.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:Task.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\TaskList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:TaskList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\YKGW SimpleTaskListApplication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0BDC9630-5406-4E41-B468-1F0704B4F3A1}|YKGW SimpleTaskListApplication.vcxproj|solutionrelative:YKGW SimpleTaskListApplication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,23 +46,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 282,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "Console.h",
+              "DocumentMoniker": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Console.h",
+              "RelativeDocumentMoniker": "Console.h",
+              "ToolTip": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Console.h",
+              "RelativeToolTip": "Console.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-19T02:42:53.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TaskManager.h",
               "DocumentMoniker": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\TaskManager.h",
               "RelativeDocumentMoniker": "TaskManager.h",
               "ToolTip": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\TaskManager.h",
               "RelativeToolTip": "TaskManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-08-18T10:09:36.873Z"
+              "WhenOpened": "2025-08-18T10:09:36.873Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "TaskList.h",
               "DocumentMoniker": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\TaskList.h",
               "RelativeDocumentMoniker": "TaskList.h",
@@ -70,20 +88,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Task.h",
               "DocumentMoniker": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Task.h",
               "RelativeDocumentMoniker": "Task.h",
               "ToolTip": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Task.h",
               "RelativeToolTip": "Task.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-08-18T08:06:05.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Error.h",
               "DocumentMoniker": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Error.h",
               "RelativeDocumentMoniker": "Error.h",
@@ -91,7 +109,8 @@
               "RelativeToolTip": "Error.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-08-18T09:12:09.456Z"
+              "WhenOpened": "2025-08-18T09:12:09.456Z",
+              "EditorCaption": ""
             }
           ]
         },
@@ -107,39 +126,40 @@
               "RelativeDocumentMoniker": "TaskManager.cpp",
               "ToolTip": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\TaskManager.cpp",
               "RelativeToolTip": "TaskManager.cpp",
-              "ViewState": "AgIAAL0AAAAAAAAAAAAAANEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-18T10:09:37.113Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "TaskList.cpp",
               "DocumentMoniker": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\TaskList.cpp",
               "RelativeDocumentMoniker": "TaskList.cpp",
               "ToolTip": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\TaskList.cpp",
               "RelativeToolTip": "TaskList.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-08-18T10:09:17.977Z"
+              "WhenOpened": "2025-08-18T10:09:17.977Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Task.cpp",
               "DocumentMoniker": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Task.cpp",
               "RelativeDocumentMoniker": "Task.cpp",
               "ToolTip": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\Task.cpp",
               "RelativeToolTip": "Task.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-18T09:56:24.722Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "YKGW SimpleTaskListApplication.cpp",
               "DocumentMoniker": "C:\\Users\\Louis\\Documents\\GitHub\\YKGW-SimpleTaskListApplication\\YKGW SimpleTaskListApplication\\YKGW SimpleTaskListApplication.cpp",
               "RelativeDocumentMoniker": "YKGW SimpleTaskListApplication.cpp",

@@ -41,5 +41,8 @@
     <ClInclude Include="TaskManager.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="Console.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
