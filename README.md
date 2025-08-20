@@ -14,7 +14,7 @@
   2. Enter the commands as listed and instructed in the menu.
 
 # Demo Video
-  
+  https://youtu.be/S8UA01IuWlI
 
 # Testing
   Currently a Work-In-Progress as of 20th August 2025 0500hrs. (Deadline give was by 20th August, therefore I am submitting this proof of work for now)
